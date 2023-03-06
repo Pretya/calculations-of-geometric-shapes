@@ -6,6 +6,9 @@ function rectangleArea (a, b) {
   return a * b
 }
 
-function parallelogramAndRhombusArea (a, h) {
+function parallelogramArea (a, h) {
+  return a * h
+}
+function rhombusArea (a, h) {
   return a * h
 }

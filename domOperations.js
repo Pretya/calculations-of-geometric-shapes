@@ -1,27 +1,28 @@
-let squer = document.getElementById('dlinaStoroniKvadrata');
-let rectangleA = document.getElementById('pervayaStoronaPriamougolnika');
-let rectangleB = document.getElementById('drugayaStoronaPriamougolnika');
-let parallelogramA = document.getElementById('dlinaStoronyParalelograma');
-let parallelogramH = document.getElementById('dlinaVisotyParalelograma');
-let rhombusA = document.getElementById('dlinaStoronyRomba');
-let rhombusH = document.getElementById('dlinaVisotyRomba');
+
 
 function showResultInDomKvadrat() {
+  const squer = document.getElementById('dlinaStoroniKvadrata').value;
   const kvadrat = document.getElementById('ploschadKvadrata');
-  kvadrat.innerHTML = squareArea(document.getElementById('dlinaStoroniKvadrata').value)
+  kvadrat.innerHTML = squareArea(squer)
 }
 
 function showResultInDomPriamougolnika() {
-  const Priamougolnik = document.getElementById('ploschadPriamougolnika');
-  Priamougolnik.innerHTML = rectangleArea(document.getElementById('pervayaStoronaPriamougolnika').value, document.getElementById('drugayaStoronaPriamougolnika').value)
+  const rectangleA = document.getElementById('pervayaStoronaPriamougolnika').value;
+  const rectangleB = document.getElementById('drugayaStoronaPriamougolnika').value;
+  const priamougolnik = document.getElementById('ploschadPriamougolnika');
+  priamougolnik.innerHTML = rectangleArea(rectangleA, rectangleB)
 }
 
 function showResultInDomParalelograma() {
-  const Paralelogram = document.getElementById('ploschadParalelograma');
-  Paralelogram.innerHTML = parallelogramAndRhombusArea(document.getElementById('dlinaStoronyParalelograma').value, document.getElementById('dlinaVisotyParalelograma').value)
+  const parallelogramA = document.getElementById('dlinaStoronyParalelograma').value;
+  const parallelogramH = document.getElementById('dlinaVisotyParalelograma').value;
+  const paralelogram = document.getElementById('ploschadParalelograma');
+  paralelogram.innerHTML = parallelogramArea(parallelogramA, parallelogramH)
 }
 
 function showResultInDomRomba() {
-  const Romb = document.getElementById('ploschadRomba');
-  Romb.innerHTML = parallelogramAndRhombusArea(document.getElementById('dlinaStoronyRomba').value, document.getElementById('dlinaVisotyRomba').value)
+  const rhombusA = document.getElementById('dlinaStoronyRomba').value;
+  const rhombusH = document.getElementById('dlinaVisotyRomba').value;
+  const romb = document.getElementById('ploschadRomba');
+  romb.innerHTML = rhombusArea(rhombusA, rhombusH)
 }
